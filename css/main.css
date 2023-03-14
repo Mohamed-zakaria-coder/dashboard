@@ -160,7 +160,7 @@ body {
 .sidebar ul li a:hover,
 .sidebar ul li a.active{
     background-color: #f6f6f6;
-}echo "# dashboard" >> README.md
+}
 .sidebar ul li span {
     margin-left: 5px;
 }

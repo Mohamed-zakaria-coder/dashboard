@@ -134,6 +134,7 @@ body {
     list-style: none;
     padding: 0;
 }
+
 .sidebar ul li a {
     transition: 0.5s;
     border-radius: 5px;
@@ -146,21 +147,26 @@ body {
     border-radius: 6px;
     margin-bottom: 5px;
 }
+
 .sidebar ul li i {
     margin-right: 5px;
 }
+
 @media(max-width: 767px) {
     .sidebar ul li a {
         padding: 10px;
     }
+
     .sidebar ul li i {
         margin-right: 0px;
     }
 }
+
 .sidebar ul li a:hover,
-.sidebar ul li a.active{
+.sidebar ul li a.active {
     background-color: #f6f6f6;
 }
+
 .sidebar ul li span {
     margin-left: 5px;
 }
@@ -270,7 +276,7 @@ body {
 
 }
 
-.page-content {}
+/* .page-content {} */
 
 .page-content h1 {
     margin: 20px 20px 40px;
@@ -299,9 +305,9 @@ body {
 }
 
 /* Start Welcome */
-.welcome-parent {
-    background-color: white;
-}
+/* .welcome-parent {
+    
+} */
 
 .welcome {
     display: flex;
@@ -1386,7 +1392,7 @@ body {
 
 }
 
-.projects table tbody {}
+/* .projects table tbody {} */
 
 .projects table thead th {
     padding: 10px;
@@ -1574,7 +1580,7 @@ label input:checked+.toggle::before {
     margin-bottom: 20px;
 }
 
-.general-info form {}
+/* .general-info form {} */
 
 .general-info form label {
     display: block;
@@ -1795,7 +1801,7 @@ label input:checked+.toggle::before {
 
 }
 
-.widgets-control form div input:checked {}
+/* .widgets-control form div input:checked {} */
 
 /* End Widgets-control */
 /* Start Backup Manager */
@@ -1917,7 +1923,7 @@ label input:checked+.toggle::before {
 /* End Backup Manager */
 /* End Settings */
 /* Start Profile */
-.profile-page {}
+/* .profile-page {} */
 
 .overview {
     margin: 20px;
@@ -2118,7 +2124,7 @@ label input:checked+.toggle::before {
     list-style: none;
 }
 
-.other-information .my-skills ul li {}
+/* .other-information .my-skills ul li {} */
 
 .other-information .my-skills ul li span {
     background-color: #eee;
@@ -2801,7 +2807,7 @@ label input:checked+.toggle::before {
 /* Start Plans */
 .plans-page {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     margin-left: 20px;
     margin-right: 20px;
     gap: 20px;
@@ -2929,6 +2935,96 @@ label input:checked+.toggle::before {
 }
 
 /* End Plans */
+/* Start Graph */
+/* .graph-page{
+    
+} */
+.graph-page .pie-chart-parent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.graph-page .pie-chart-parent h3 {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.graph-page .pie-chart-parent .reference-colors {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.graph-page .pie-chart-parent .reference-colors>div {
+    position: relative;
+}
+
+@media(max-width: 768px) {
+    .graph-page .pie-chart-parent .reference-colors {
+        gap: 8px;
+    }
+
+    .graph-page .pie-chart-parent .reference-colors>div {
+        font-size: 12px;
+    }
+
+}
+
+.graph-page .pie-chart-parent .reference-colors .circle::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.graph-page .pie-chart-parent .reference-colors .first-color::before {
+    background-color: rgba(255, 0, 0, 0.322);
+}
+
+.graph-page .pie-chart-parent .reference-colors .second-color::before {
+    background-color: rgba(140, 0, 255, 0.233);
+}
+
+.graph-page .pie-chart-parent .reference-colors .third-color::before {
+    background-color: white;
+    box-shadow: 0 0 1px black;
+}
+
+.graph-page .pie-chart-parent .reference-colors .fourth-color::before {
+    background-color: brown;
+}
+
+.graph-page .pie-chart-parent .reference-colors .fifth-color::before {
+    background-color: rgba(0, 0, 255, 0.425);
+}
+
+.graph-page .pie-chart {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image: conic-gradient(rgba(255, 0, 0, 0.322) 0deg, rgba(255, 0, 0, 0.322) 50deg, rgba(140, 0, 255, 0.233) 50deg, rgba(140, 0, 255, 0.233) 100deg, white 100deg, white 150deg, brown 150deg, brown 260deg, rgba(0, 0, 255, 0.425) 260deg, rgba(0, 0, 255, 0.425) 360deg);
+}
+
+@media (max-width: 768px) {
+    .graph-page .pie-chart {
+        width: 200px;
+        height: 200px;
+
+    }
+}
+
+.graph-page img {
+    width: 100%;
+
+    object-fit: cover;
+}
+
+/* End Graph */
 /* Start Animation */
 @keyframes flash {
 

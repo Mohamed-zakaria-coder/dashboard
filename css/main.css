@@ -11,6 +11,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -1755,7 +1756,7 @@ label input:checked+.toggle::before {
     content: '\f00c';
     font-weight: 900;
     position: absolute;
-    left: -23px;
+    left: -24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1763,9 +1764,10 @@ label input:checked+.toggle::before {
     background-color: var(--blue-color);
     transform: scale(0) rotate(360deg);
     transition: var(--main-transition);
-    font-size: 15px;
+    font-size: 16px;
     top: 50%;
-    margin-top: -7px;
+    margin-top: -8px;
+    border-radius: 4px;
 
 }
 
@@ -1784,11 +1786,12 @@ label input:checked+.toggle::before {
     margin-top: -8px;
     transition: var(--main-transition);
     border-radius: 4px;
-}
-
-.widgets-control form div:hover label::after {
     border: 1px solid var(--blue-color);
 }
+
+/* .widgets-control form div:hover label::after {
+    border: 1px solid var(--blue-color);
+} */
 
 .widgets-control form div label {
     font-size: 18px;
@@ -1838,7 +1841,7 @@ label input:checked+.toggle::before {
     height: 18px;
     border-radius: 50%;
     border: 1px solid black;
-    left: -22px;
+    left: -20px;
     top: 50%;
     margin-top: -10px;
 }
@@ -1846,12 +1849,12 @@ label input:checked+.toggle::before {
 .backup-manager form>div label::after {
     content: '';
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
     background-color: var(--blue-color);
     top: 50%;
-    margin-top: -7px;
-    left: -19px;
+    margin-top: -10px;
+    left: -20px;
     border-radius: 50%;
     transform: scale(0) rotate(360deg);
     transition: var(--main-transition);
@@ -1863,7 +1866,7 @@ label input:checked+.toggle::before {
 
 .backup-manager form label {
     padding-left: 5px;
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
 }
 

@@ -3023,7 +3023,7 @@ label input:checked+.toggle::before {
 
 .graph-page img {
     width: 100%;
-
+    margin-top: 30px;
     object-fit: cover;
 }
 

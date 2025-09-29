@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stats</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- Start Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-heading">
+          <h3>Mz</h3>
+        </div>
+        <ul>
+          <li>
+            <a href="index.html"
+              ><i class="fa-solid fa-chart-column fa-fw"></i>
+              <span>Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="settings.html"
+              ><i class="fa-solid fa-gear fa-fw"></i> <span>Settings</span></a
+            >
+          </li>
+          <li>
+            <a href="profile.html"
+              ><i class="fa-regular fa-user fa-fw"></i> <span>Profile</span></a
+            >
+          </li>
+          <li>
+            <a href="projects.html"
+              ><i class="fa-solid fa-diagram-project fa-fw"></i>
+              <span>Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="courses.html"
+              ><i class="fa-solid fa-school fa-fw"></i> <span>Courses</span></a
+            >
+          </li>
+          <li>
+            <a href="friends.html"
+              ><i class="fa-solid fa-user-group fa-fw"></i>
+              <span>Friends</span></a
+            >
+          </li>
+          <li>
+            <a href="files.html"
+              ><i class="fa-solid fa-file-pen fa-fw"></i> <span>Files</span></a
+            >
+          </li>
+          <li>
+            <a href="plans.html"
+              ><i class="fa-solid fa-chart-bar fa-fw"></i> <span>Plans</span></a
+            >
+          </li>
+          <li>
+            <a href="graph.html"
+              ><i class="fa-solid fa-chart-simple fa-fw"></i
+              ><span>Graph</span></a
+            >
+          </li>
+          <li>
+            <a href="stats.html" class="active"
+              >  <i class="fa-solid fa-chart-line fa-fw"></i><span>Stats</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- End Sidebar -->
+      <!-- Start Content -->
+      <div class="content">
+        <!-- Start Navbar -->
+        <div class="navbar">
+          <div class="search">
+            <input type="search" placeholder="Search" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="user-parent">
+            <div class="comment">
+              <i class="fa-regular fa-comment"></i>
+            </div>
+            <i class="fa-solid fa-circle-user user"></i>
+          </div>
+        </div>
+        <!-- End Navbar -->
+        <section class="showcase">
+          <!-- Background decorations -->
+          <div class="bg-circles"></div>
+
+          <!-- Heading -->
+          <div class="showcase-header">
+            <h1>Experience the Future of <span>Design</span></h1>
+            <p>
+              Interactive. Elegant. Powerful. A dashboard crafted for
+              excellence.
+            </p>
+          </div>
+
+          <!-- Feature Cards -->
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h3>⚡ Fast</h3>
+              <p>
+                Optimized performance with blazing speed and smooth experience.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>🎨 Beautiful</h3>
+              <p>
+                Modern UI with gradients, glassmorphism, and soft animations.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>🔒 Secure</h3>
+              <p>Enterprise-level security built into every interaction.</p>
+            </div>
+            <div class="feature-card">
+              <h3>📈 Insightful</h3>
+              <p>Advanced analytics & reporting for smarter decisions.</p>
+            </div>
+          </div>
+
+          <!-- Visualization -->
+          <div class="visualization">
+            <h2>Growth at a Glance</h2>
+            <canvas id="growthChart"></canvas>
+          </div>
+        </section>
+      </div>
+
+      <!-- End Content -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("growthChart").getContext("2d");
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+          datasets: [
+            {
+              label: "Revenue",
+              data: [1200, 1800, 2500, 3000, 4200, 4800, 6200],
+              borderColor: "#22d3ee",
+              backgroundColor: "rgba(34,211,238,0.3)",
+              fill: true,
+              tension: 0.4,
+              pointRadius: 5,
+              pointHoverRadius: 7,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: {
+              grid: { color: "rgba(255,255,255,0.1)" },
+              ticks: { color: "#fff" },
+            },
+            y: {
+              grid: { color: "rgba(255,255,255,0.1)" },
+              ticks: { color: "#fff" },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
